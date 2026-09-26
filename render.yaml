@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: tg-autoposter-bot
+    runtime: python
+    repo: https://github.com/pinkyguy2323/tg-autoposter-bot
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: PORT
+        value: 10000
