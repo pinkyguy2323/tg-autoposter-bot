@@ -15,10 +15,13 @@ python bot.py
 - `⏱ Интервал` — 30 сек / 60 сек / 10 мин / 60 мин или свой
 - `▶️ Запустить` / `⏸ Остановить`
 
-## Бесплатный хостинг (когда скажешь - залью)
-Готово для:
-- Render.com → New → Background Worker → `pip install -r requirements.txt` + `python bot.py`, токен в Environment Variable (потом переделаю на os.getenv)
-- Railway.app → Deploy from repo
-- PythonAnywhere / Replit — просто загрузить bot.py и запустить
+## Бесплатный хостинг 24/7 — Koyeb (деплой в 1 клик)
 
-Данные хранятся в `autoposter_data.json` рядом с ботом.
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/pinkyguy2323/tg-autoposter-bot&branch=main&builder=dockerfile&name=tg-autoposter-bot&ports=8000;http;/&env[PORT]=8000)
+
+1. Жми кнопку выше → войди через GitHub.
+2. В Environment Variables добавь `BOT_TOKEN` (токен от @BotFather).
+3. Health check path: `/health`, Port: `8000`, Region: Frankfurt.
+4. Deploy → в логах `✅ Бот запущен`.
+
+Данные хранятся в `autoposter_data.json` рядом с ботом (на free-хостинге стирается при редеплое — настрой канал/посты заново в боте после деплоя).
